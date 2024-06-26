@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Full Smoke Test Suite" preserve-order="true">
+    <listeners>
+        <listener class-name="testListeners.ExecutionListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Getting calculated cost from Legacy Pricing Calculator" enabled="true">
+        <classes>
+            <class name="smokeTesting.legacyCalculatorTestScenarios.LegacyPricingCalculatorTest">
+                <methods>
+                    <include name="chooseTheEquipment"/>
+                    <include name="validationOfRequirements"/>
+                    <include name="estimatePrice"/>
+                    <include name="getEmailAddress"/>
+                    <include name="sendEmailAndValidatePrice"/>
+                </methods>
+            </class>
+
+            <class name="smokeTesting.legacyCalculatorTestScenarios.SimpleFiledTest">
+                <methods>
+                    <include name="pageScrolling"/>
+                    <include name="failedTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Failed attempt to calculate the prise" enabled="false">
+        <classes>
+
+        </classes>
+    </test>
+</suite>
