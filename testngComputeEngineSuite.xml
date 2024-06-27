@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cloud pricing calculator Compute Engine Test Suite" preserve-order="true">
+    <listeners>
+        <listener class-name="testListeners.ExecutionListener"></listener>
+        <listener class-name="testListeners.TestListener"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="Cost calculation from Compute Engine Instances category" enabled="true">
+        <classes>
+            <class name="smokeTesting.computeEngineTestScenarios.CalculatePriceTest">
+                <methods>
+                    <include name="searchingRequiredContent"/>
+                    <include name="chooseCategoryToEstimate"/>
+                    <include name="setupEquipmentConfiguration"/>
+                    <include name="validationOfMachineType"/>
+                    <include name="validationOfChosenCPUsAndRAM"/>
+                    <include name="compareOfCalculatedPriceResult"/>
+                    <include name="checkingDetailedInformationOfTotalCost"/>
+                    <include name="viewEstimateSummaryPage"/>
+                    <include name="validateEstimatedCostFromSummaryPage"/>
+                </methods>
+            </class>
+            <class name="smokeTesting.computeEngineTestScenarios.NumberFieldsTest">
+                <methods>
+                    <exclude name="enterToPricingCalculatorPage"/>
+                    <exclude name="chooseCategoryToEstimate"/>
+                    <include name="checkNumberOfInstancesField"/>
+                    <include name="checkTotalInstancesUsageTimeField"/>
+                    <include name="checkBootDiskSizeField"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

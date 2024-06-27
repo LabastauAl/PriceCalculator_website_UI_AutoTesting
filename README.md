@@ -3,7 +3,8 @@
 To work with presented test scenarios no account is required or you don't need to register in the service being tested.
 For the qiuck start with this software solution fill in the appropriate field in the [testAndSetupData.properties] file which you can find at *.src/test/resources*.
 
-Description (in russian language) of the test scenarios with reproducible test cases you can find in the [legacyCalculatorTestScenarios.txt] file at the root directory of this program solution.
+Description (in russian language) of the test scenarios with reproducible test cases you can find in the [legacyCalculatorTestScenarios.txt] and [computeEngineTestScenarios.txt] files at the root directory of this program solution.
 
 [testAndSetupData.properties]: ./src/test/resources/testAndSetupData.properties
 [legacyCalculatorTestScenarios.txt]: ./legacyCalculatorTestScenarios.txt
+[computeEngineTestScenarios.txt]: ./computeEngineTestScenarios.txt
